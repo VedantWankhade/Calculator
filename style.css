@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    height: 100vh;
+}
+
+.calculator {
+    border: 1px solid black;
+    width: 50%;
+    height: 60vh;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.row {
+    border: 1px solid green;
+    flex: 1;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
+.row > button {
+    flex: 1;
+}
+
+.screen {
+    align-items: center;
+    justify-content: right;
+    margin-right: 10px;
+    font-size: larger;
+}
