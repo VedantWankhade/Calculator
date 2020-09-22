@@ -7,6 +7,8 @@ let nextNumber = 0;
 
 //------------------ Selecting dom elements -----------------------
 
+const light = document.querySelector(".light");
+light.style.backgroundColor = "green"
 const switchButton = document.querySelector(".switch");
 const eqn = document.querySelector(".equation");
 const buttons = document.querySelectorAll("button");
@@ -28,6 +30,10 @@ btns.addEventListener("click", handleButtonEvent);
 function toggleSwitch() {
 
     clearScreen();
+    if (light.style.backgroundColor == "green")
+        light.style.backgroundColor = "white";
+    else light.style.backgroundColor = "green"
+
     isSwitchON = !isSwitchON;
     console.log("Switched " + (isSwitchON ? 'OFF': 'ON'));
     for (let i = 0; i < buttons.length; i++) {
@@ -125,3 +131,39 @@ function handleButtonEvent(event) {
             appendDigit(input);
     }
 }
+
+btns.addEventListener("keydown", function(event) {
+
+    switch (event.key) {
+
+        case "Backspace": 
+            clearScreen();
+             break;
+
+             case "+": 
+             case "-":
+             case "*":
+             case "/":
+                 setOpAndPrevNum(event.key);
+                 break;
+             
+             case "Enter":
+                 showResult();
+                 break;     
+
+        case "0":
+            case "1":
+                case "2":
+                    case "3":
+                        case "4":
+                            case "5":
+                                case "6":
+                                    case "7":
+                                        case "8":
+                                            case "9":
+                                    
+            appendDigit(event.key);
+
+    }
+
+})
