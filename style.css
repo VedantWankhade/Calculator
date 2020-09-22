@@ -18,15 +18,14 @@ main {
 }
 
 .calculator {
-    border: 1px solid black;
     width: 50%;
     height: 60vh;
     display: flex;
     flex-flow: column nowrap;
+    padding: 0.5em;
 }
 
 .row {
-    border: 1px solid green;
     flex: 1;
     display: flex;
     flex-flow: row nowrap;
@@ -38,8 +37,54 @@ main {
 }
 
 .screen {
-    align-items: center;
-    justify-content: right;
-    margin-right: 10px;
+    display: block;
     font-size: larger;
+    color: white;
+}
+
+button:disabled {
+    color: black;
+    cursor: not-allowed;
+}
+
+.buttons {
+    flex: 4;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.screen {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: right;
+    background-color: #2B292A;
+    border-radius: 1em;
+    border: none;
+}
+
+.equation {
+    flex: 1;
+    padding: 0.3em;
+}
+
+.output {
+    flex: 1;
+    padding: 0.3em;
+}
+
+button {
+    background-color: black;
+    color: green;
+    cursor: pointer;
+    border-radius: 1em;
+    border: 0;
+    margin: 0.1em;
+}
+
+button:hover {
+    background-color: rgb(75, 69, 69);
+}
+
+button:disabled:hover {
+    background-color: black;
 }
