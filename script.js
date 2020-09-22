@@ -20,38 +20,7 @@ output.innerText = "";
 
 //----------------- Event Listners --------------------------------
 
-btns.addEventListener("click", function(event) {
-
-    let input = event.target.innerText;
-    switch (input) {
-
-        case "ON/OFF":
-            toggleSwitch();
-            break;
-        
-        case "AC":
-            clearScreen();
-            break;
-
-        case "DEL":
-            deleteLastDigit();
-            break;
-
-        case "+": 
-        case "-":
-        case "*":
-        case "/":
-            setOpAndPrevNum(input);
-            break;
-        
-        case "=":
-            showResult();
-            break;
-
-        default:
-            appendDigit(input);
-    }
-});
+btns.addEventListener("click", handleButtonEvent);
 
 
 //----------------- Utility Methods --------------------------------
@@ -122,4 +91,37 @@ function setOpAndPrevNum(op) {
     eqn.innerText += prevNumber + op;
     output.innerText = "";
     prevOperator = op;
+}
+
+function handleButtonEvent(event) {
+
+    let input = event.target.innerText;
+    switch (input) {
+
+        case "ON/OFF":
+            toggleSwitch();
+            break;
+        
+        case "AC":
+            clearScreen();
+            break;
+
+        case "DEL":
+            deleteLastDigit();
+            break;
+
+        case "+": 
+        case "-":
+        case "*":
+        case "/":
+            setOpAndPrevNum(input);
+            break;
+        
+        case "=":
+            showResult();
+            break;
+
+        default:
+            appendDigit(input);
+    }
 }

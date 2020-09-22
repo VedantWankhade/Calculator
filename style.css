@@ -22,7 +22,8 @@ main {
     height: 60vh;
     display: flex;
     flex-flow: column nowrap;
-    padding: 0.5em;
+    border-radius: 15px;
+    box-shadow: 10px 5px 5px rgb(179, 172, 172);
 }
 
 .row {
@@ -36,12 +37,6 @@ main {
     flex: 1;
 }
 
-.screen {
-    display: block;
-    font-size: larger;
-    color: white;
-}
-
 button:disabled {
     color: black;
     cursor: not-allowed;
@@ -51,40 +46,70 @@ button:disabled {
     flex: 4;
     display: flex;
     flex-flow: column nowrap;
+    flex-basis: auto;
 }
 
 .screen {
-    display: flex;
-    flex-flow: column nowrap;
+    display: block;
     text-align: right;
-    background-color: #2B292A;
-    border-radius: 1em;
-    border: none;
+    background-color: #475862;
+    border-radius: 15px 15px 0 0;
+    font-size: x-large;
+ /*   height: fit-content;
+ */
 }
 
 .equation {
-    flex: 1;
+    display: block;
+    margin-right: 5px;
     padding: 0.3em;
+    height: 50px;
+    border: 1px solid green;
 }
 
 .output {
-    flex: 1;
+    display: block;
+    margin-right: 5px;
     padding: 0.3em;
+    height: 50px;
+    border: 1px solid red;
 }
 
 button {
-    background-color: black;
-    color: green;
+    background-color: #FFFFFF;
     cursor: pointer;
-    border-radius: 1em;
-    border: 0;
-    margin: 0.1em;
+    margin: 0;
+    border: none;
 }
 
-button:hover {
-    background-color: rgb(75, 69, 69);
+.settings {
+    background-color:#E4E4E4;
 }
 
-button:disabled:hover {
-    background-color: black;
+.op {
+    background-color: #00AB7D;
+}
+
+.Rround {
+    border-radius: 0 0 15px 0;
+}
+
+.Lround {
+    border-radius: 0 0 0 15px;
+}
+
+.number:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+.op:hover {
+    background-color: #0ba770;
+}
+
+.settings:hover {
+    background-color: #bebebe;
+}
+
+.number:disabled {
+    color: white;
 }
